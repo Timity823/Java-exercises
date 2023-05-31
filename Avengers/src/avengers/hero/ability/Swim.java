@@ -1,5 +1,5 @@
 package avengers.hero.ability;
 
-public interface Swimming {
+public interface Swim {
     void swim();
 }
