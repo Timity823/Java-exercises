@@ -1,6 +1,6 @@
 package avengers.hero.infinitystone;
 
-public class SpaceStone extends InfinityStone{
+public class SpaceStone extends InfinityStone {
     public SpaceStone() {
         super("Blue", 10);
     }

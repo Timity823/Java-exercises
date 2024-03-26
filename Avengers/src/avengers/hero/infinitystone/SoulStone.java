@@ -1,6 +1,6 @@
 package avengers.hero.infinitystone;
 
-public class SoulStone extends InfinityStone{
+public class SoulStone extends InfinityStone {
     public SoulStone() {
         super("Brown", 50);
     }

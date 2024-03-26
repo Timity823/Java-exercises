@@ -5,12 +5,12 @@ import avengers.fleet.Report;
 import avengers.hero.Hero;
 import avengers.hero.type.HeroFactory;
 
-public class Engine {
+public class CommandProcessor {
     private final Fleet fleet;
     private final HeroFactory heroFactory;
     private final Report report;
 
-    public Engine(Fleet fleet, HeroFactory heroFactory, Report report) {
+    public CommandProcessor(Fleet fleet, HeroFactory heroFactory, Report report) {
         this.fleet = fleet;
         this.heroFactory = heroFactory;
         this.report = report;
@@ -22,5 +22,6 @@ public class Engine {
     }
     public void generateReport (){
         report.printNumberOfStonesByType();
+        report.printSumOfPowers();
     }
 }

@@ -6,9 +6,8 @@ public final class Passport {
     private final int passportNumber;
 
     public Passport() {
-        this.passportNumber =  (int) (Math.random()*999999+1);
+        this.passportNumber = (int) (Math.random() * 999999 + 1);
     }
-
 
 
     public int getPassportNumber() {
