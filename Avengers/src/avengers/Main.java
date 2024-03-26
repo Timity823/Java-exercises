@@ -1,39 +1,21 @@
 package avengers;
 
 import avengers.fleet.Fleet;
-import avengers.fleet.Ship;
-import avengers.hero.Hero;
-import avengers.hero.infinitystone.InfinityStone;
-import avengers.hero.infinitystone.MindStone;
-import avengers.hero.infinitystone.SpaceStone;
-import avengers.hero.infinitystone.TimeStone;
-import avengers.hero.type.AvengerFromEarth;
-import avengers.hero.type.AvengerFromSpace;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import avengers.fleet.Report;
+import avengers.hero.type.HeroFactory;
+import avengers.processor.CommandInterpreter;
+import avengers.processor.ConsoleReader;
+import avengers.processor.CommandProcessor;
 
 public class Main {
     public static void main(String[] args) {
-        final String STOP_MARKER = "STOP";
+        HeroFactory heroFactory = new HeroFactory();
+        Fleet fleet = new Fleet();
+        Report report = new Report(fleet);
+        CommandProcessor engine = new CommandProcessor(fleet,heroFactory, report);
+        CommandInterpreter commandInterpreter =new CommandInterpreter(engine);
+        ConsoleReader consoleReader = new ConsoleReader(commandInterpreter);
+        consoleReader.read();
 
-        InfinityStone spaceStone = new SpaceStone();
-        InfinityStone timeStone = new TimeStone();
-        InfinityStone mindStone = new MindStone();
-
-        List<Hero> listOfHero = new ArrayList<>();
-        try (Scanner scanner = new Scanner(System.in)) {
-            while (true) {
-                Hero hero = new Hero(scanner.next());
-                if (STOP_MARKER.equals(hero)) {
-                    break;
-                } else {
-
-                }
-
-
-            }
-        }
     }
 }

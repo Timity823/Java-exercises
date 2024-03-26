@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Airplane" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AverageOfOddNumbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BilderDesingPattern" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ComparableComparator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Generikusok" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/IkeaExercise" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/IterableIterator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MinMaxCurrent" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ScannerForOddLengthWords" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vehicle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WordsWithNumbersInIt" vcs="Git" />
+  </component>
+</project>

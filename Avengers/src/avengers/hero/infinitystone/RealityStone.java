@@ -1,10 +1,9 @@
 package avengers.hero.infinitystone;
 
-public class RealityStone extends InfinityStone{
+public class RealityStone extends InfinityStone {
     public RealityStone() {
         super("Red", 20);
     }
-
 
 
     @Override

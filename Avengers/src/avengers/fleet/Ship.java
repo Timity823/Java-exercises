@@ -1,27 +1,49 @@
 package avengers.fleet;
 
+import avengers.exception.ShipFullException;
 import avengers.hero.Hero;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Ship {
     //itt lista lesz amiben összesen 4 elem lesz
 
-    private final int MAX_SEAT_ON_SHIP=4;
-    public List<Hero> heroes;
+    private final int MAX_SEAT_ON_SHIP = 4;
+    private final List<Hero> heroes = new ArrayList<>(MAX_SEAT_ON_SHIP);
 
-    public Ship() {
-    }
-    public boolean addHeroToShip(Hero hero){
-        heroes.add(hero);
-        if (isShipFull()){
-            return true;
+    public boolean addHeroToShip(Hero hero) {
+        if (isShipFull()) {
+            return false;
         }
-        return false;
+        heroes.add(hero);
+        return true;
     }
 
-    public boolean isShipFull(){
-        return (heroes.size()>MAX_SEAT_ON_SHIP);
+    public void addHeroToShipV2(Hero hero) {
+        if (isShipFull()) {
+            return;
+        }
+        heroes.add(hero);
+        return;
+    }
+
+    public List<Hero> getHeroes() {
+        return Collections.unmodifiableList(heroes);
+    }
+
+    public void addHeroToShipV3(Hero hero) {
+        if (isShipFull()) {
+            throw new ShipFullException();
+        }
+        heroes.add(hero);
+
+    }
+
+    private boolean isShipFull() {
+
+        return (heroes.size() >= MAX_SEAT_ON_SHIP);
     }
 
     @Override

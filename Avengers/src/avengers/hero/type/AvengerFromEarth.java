@@ -3,13 +3,15 @@ package avengers.hero.type;
 import avengers.hero.Hero;
 import avengers.hero.ability.CanFly;
 import avengers.hero.infinitystone.InfinityStone;
+import avengers.hero.infinitystone.SingletonStone;
 import avengers.hero.tool.Passport;
 
 import java.util.Objects;
 
 public class AvengerFromEarth extends Hero implements CanFly {
-    private final Passport passport =new Passport();
-    public AvengerFromEarth(String name, int power, InfinityStone stone) {
+    private final Passport passport = new Passport();
+
+    public AvengerFromEarth(String name, int power, SingletonStone stone) {
         super(name, power, stone);
         passport.getPassportNumber();
     }
